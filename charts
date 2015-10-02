@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Medical errors</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+    <h1> Medical Errors in the U.S.</h1>
+    <div class="col-lg-12 col-md-!2 col-sm-12">
+    <p>Healthcare Associated Infections are the third leading cause of death in the United States. In 2013, the government took a look at the numbers each hospital reported and reduced the funding of the top 25% of hospitals by 1%.
+    
+    As a result to the high number of medical errors, training methods are being implemented to reduce these numbers, but will it ever be enough?
+    In the visuals below you can see how many hospitals were punished per state, and use the map to see if you home hospital was one of them.
+    Also, take a look at the video below to see what medical experts have to say about TeamSTEPPS, one of the educational methods being implemented in efforts to reduce the communication breakdowns that occur in the surgical units.</p>
+   </div>
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"       type="text/javascript"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+    <div id="container" style="min-width: 300px; height: 400px; margin: 0 auto">
+    <script>
+        $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'U.S. Penalized hospitals due to high Health Associated Infections'
+        },
+        subtitle: {
+            text: 'Source: <a href="http://khn.org/news/hospital-acquired-condition-penalties-by-state/">Keiser Health News</a>'
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                  fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Hospitals punished'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: 'Hospitals punished: <b>{point.y:.1f}</b>'
+        },
+        series: [{
+            name: 'Population',
+            data: [
+                ['Alabama', 11],
+                ['Alaska', 2],
+                ['Arizone', 13],
+                ['Arkansas', 8],
+                ['California', 79],
+                ['Colorado', 15],
+                ['Cunnecticut', 14],
+                ['Delaware', 2],
+                ['District of Columbia', 5],
+                ['Florida', 31],
+                ['Georgia', 29],
+                ['Hawaii', 0],
+                ['Idaho', 3],
+                ['Illinois', 27],
+                ['Indiana', 14],
+                ['Iowa', 3],
+                ['Kansas', 11],
+                ['Kentucky', 10],
+                ['Louisiana', 11],
+                ['Maine', 6],
+                ['Massachusetts', 13],
+                ['Michigan', 21],
+                ['Minnesota', 12],
+                ['Missouri', 12],
+                ['Montana', 3],
+                ['Nebraska', 7],
+                ['Nevada', 9],
+                ['New Hampshire', 3],
+                ['New Jersey', 23],
+                ['New Mexico', 11],
+                ['New York', 41],
+                ['North Carolina', 17],
+                ['North Dekota', 1],
+                ['Ohio', 22],
+                ['Oklahoma', 12],
+                ['Oregon', 9],
+                ['Pennsylvania', 39],
+                ['Rhode Island', 4],
+                ['South Carolina', 13],
+                ['South Dekota', 4],
+                ['Tennessee', 14],
+                ['Texas', 43],
+                ['Utah', 16],
+                ['Vermont', 0],
+                ['Virginia', 15],
+                ['Washington', 17],
+                ['West Virginia', 6],
+                ['Wisconsin', 18],
+                ['Wyoming', 3],
+            ],
+            dataLabels: {
+                enabled: false,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                format: '{point.y:.1f}', // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
+    </script>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <br>
+        <br>
+          <br>
+              <br>
+        <br>
+          <br>
+            <br>
+              <br>
+                <p>Was your home hospital penalized? Use the interactive map to find out.</p>
+<iframe src="http://fortress.maptive.com/ver4/a5b6587323e88fe84bf3ab3cca2306f2" frameborder="0" width="700" height="500"></iframe>
+</div>
+</div>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
